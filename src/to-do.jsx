@@ -34,13 +34,13 @@
 //    )
 // }
 // Option-06: Use Variable
-export default function({task, isDone, time = 0}){
-   let listItem;
-   if(isDone === true){
-      listItem = <li>Done: {task}. Duration: {time}</li>
-   }
-   else{
-      listItem = <li>pending: {task}</li>
-   }
-   return listItem
-}
+// export default function({task, isDone, time = 0}){
+//    let listItem;
+//    if(isDone === true){
+//       listItem = <li>Done: {task}. Duration: {time}</li>
+//    }
+//    else{
+//       listItem = <li>pending: {task}</li>
+//    }
+//    return listItem
+// }

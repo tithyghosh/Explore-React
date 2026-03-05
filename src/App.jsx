@@ -1,17 +1,28 @@
 
 import { useDebugValue } from 'react';
 import './App.css'
-import ToDO from './to-do';
+// import ToDO from './to-do';
+import Actor from './Actor';
+import Singer from './Singer';
 function App() {
-  
-
+  const actors = ['Nani','Ram Charan', 'Samantha', 'Allu Arjun'];
+  const singers = [
+    {id: 1, name: 'Shreya Ghosal', song:'Dholna'},
+    {id: 2, name: 'Arijit Sing', song:'Ishq'},
+    {id: 3, name: 'Anupom', song:'Amake Amar moto thakte dao'}
+  ]
   return (
     <>
       
       <h1>React Core Concept</h1>
-      <ToDO task='Learn React' isDone={true}time = '100' ></ToDO>
-      <ToDO task='Revise JS' isDone={false}></ToDO>
-     
+      {/* Array */}
+     {
+      actors.map(actor => <Actor actor ={actor}></Actor>)
+     }
+      {/* Object */}
+     {
+      singers.map(singer => <Singer singer={singer}></Singer>)
+     }
      
      {/* <Student></Student>
      <Person></Person>
