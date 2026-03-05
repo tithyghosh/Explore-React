@@ -21,10 +21,26 @@
 //       isDone ? <li>Done: {task}. Duration: {time}</li> : <li>Not Done: {task}</li>
 //    )
 // }
-//option-4: Only if it is true
+//option-4: Only if it is true with &&
 // export default function ToDO({task, isDone, time = 0}){
 //    return(
 //       isDone && <li>Done: {task}. Duration: {time}</li> 
 //    )
 // }
-// option-5:
+// option-5: With Or ||
+// export default function ({task, isDone, time = 0}){
+//    return(
+//       isDone || <li>Not Done: {task}. Duration:{time}</li>
+//    )
+// }
+// Option-06: Use Variable
+export default function({task, isDone, time = 0}){
+   let listItem;
+   if(isDone === true){
+      listItem = <li>Done: {task}. Duration: {time}</li>
+   }
+   else{
+      listItem = <li>pending: {task}</li>
+   }
+   return listItem
+}
